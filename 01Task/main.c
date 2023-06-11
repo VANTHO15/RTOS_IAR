@@ -21,7 +21,7 @@ int main(void)
   check1 = xTaskCreate(task1_handler, "Task-1", 200, "I am Task-1", 2, &task1_handle);
   configASSERT(check1 == pdPASS);
 
-  check2 = xTaskCreate(task2_handler, "Task-2", 200, "I am Task-2", 2, &task2_handle);
+  check2 = xTaskCreate(task2_handler, "Task-2", 200, NULL, 2, &task2_handle);
   configASSERT(check2 == pdPASS);
 
   vTaskStartScheduler();
